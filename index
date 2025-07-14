@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7月から逆転する就活スライドショー</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+        .slide-container {
+            min-height: calc(100vh - 10rem); /* Adjust based on header/footer if any */
+        }
+        @media (min-width: 768px) {
+            .slide-container {
+                min-height: 500px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <!-- Slide Container -->
+        <div id="slide-container" class="relative slide-container flex items-center justify-center p-6 md:p-12">
+            <!-- Slide 1: Title -->
+            <div id="slide-1" class="slide active text-center">
+                <div class="p-8">
+                    <span class="text-lg md:text-xl font-bold text-blue-500">逆転合格へのロードマップ</span>
+                    <h1 class="text-4xl md:text-6xl font-black text-gray-800 mt-4 mb-6 leading-tight">7月からでも間に合う！<br><span class="gradient-text">逆転就活のススメ</span></h1>
+                    <p class="text-lg md:text-xl text-gray-600">今から始めるべき、具体的な3つの行動計画</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Introduction -->
+            <div id="slide-2" class="slide">
+                <div class="text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">焦りを感じているあなたへ</h2>
+                    <div class="space-y-6 text-left max-w-2xl mx-auto">
+                        <div class="bg-blue-50 p-6 rounded-xl flex items-start space-x-4">
+                            <svg class="w-8 h-8 text-blue-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-700">現状</h3>
+                                <p class="text-gray-600">7月も半ば、SNSで流れてくるインターン合格報告を見て焦っていませんか？</p>
+                            </div>
+                        </div>
+                        <div class="bg-green-50 p-6 rounded-xl flex items-start space-x-4">
+                            <svg class="w-8 h-8 text-green-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-700">心配は不要です</h3>
+                                <p class="text-gray-600">まだ十分に間に合います。ここからの行動が重要です。</p>
+                            </div>
+                        </div>
+                         <div class="bg-purple-50 p-6 rounded-xl flex items-start space-x-4">
+                            <svg class="w-8 h-8 text-purple-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-700">本日のゴール</h3>
+                                <p class="text-gray-600">就活を逆転させるための具体的なアクションを理解しましょう。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3: Action 1 -->
+            <div id="slide-3" class="slide text-center">
+                <span class="text-lg font-bold gradient-text">逆転の鍵 ①</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800 mt-2">応募数を<br>圧倒的に増やす</h2>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">とにかく行動量を増やすことが、逆転への第一歩です。結果が出ていないなら、応募数が絶対的に不足している可能性が高いと考えましょう。</p>
+                <div class="mt-8 bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-bold text-gray-700">具体的なアクション</h3>
+                    <p class="text-gray-600">既知の企業だけでなく、これまで見てこなかった未開拓の企業にも積極的に応募する。</p>
+                </div>
+            </div>
+
+            <!-- Slide 4: Merits of Action 1 -->
+            <div id="slide-4" class="slide">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">なぜ応募数を増やすのか？ <span class="text-blue-500">4つのメリット</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
+                        <h3 class="font-bold text-lg text-blue-600">1. ESの質が向上する</h3>
+                        <p class="text-gray-600 mt-2">多くのESを書くことで内容を客観視でき、効率的に改善が進みます。</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
+                        <h3 class="font-bold text-lg text-blue-600">2. Webテストの得点UP</h3>
+                        <p class="text-gray-600 mt-2">受験回数が増えることで問題形式に慣れ、自然と得点向上に繋がります。</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
+                        <h3 class="font-bold text-lg text-blue-600">3. 新たな企業を発見</h3>
+                        <p class="text-gray-600 mt-2">類似企業の応募情報に触れる機会が増え、応募先が効率的に見つかります。</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow">
+                        <h3 class="font-bold text-lg text-blue-600">4. 合格実績を積み上げる</h3>
+                        <p class="text-gray-600 mt-2">不採用には運や相性も絡みます。数をこなすことで、着実に合格を勝ち取れます。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Action 2 -->
+            <div id="slide-5" class="slide">
+                 <span class="text-lg font-bold gradient-text block text-center">逆転の鍵 ②</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mt-2 text-center mb-8">選考を徹底的に振り返る</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                        <h3 class="font-bold text-xl text-red-700 flex items-center">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                            NGな振り返り
+                        </h3>
+                        <p class="mt-3 text-gray-700">「なぜ落ちたのか？」と原因ばかりを考えること。定員や相性など、制御不能な要因に囚われても打開策は見えません。</p>
+                    </div>
+                    <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg">
+                        <h3 class="font-bold text-xl text-green-700 flex items-center">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            OKな振り返り
+                        </h3>
+                        <p class="mt-3 text-gray-700">「どうすればもっと良くなるか？」と改善策を考えること。自分のアウトプットをより良くする方法に焦点を当てましょう。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Action 3 -->
+            <div id="slide-6" class="slide text-center">
+                <span class="text-lg font-bold gradient-text">逆転の鍵 ③</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800 mt-2">OBOG訪問を<br>積極的に行う</h2>
+                <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">インターンで出遅れたと感じるなら、今すぐ行動しましょう。Webサイトだけでは分からない「会社のリアル」を知ることが重要です。</p>
+                <div class="mt-8 bg-gray-50 p-6 rounded-xl">
+                    <h3 class="font-bold text-gray-700">OBOG訪問の目的</h3>
+                    <p class="text-gray-600">インターンで補えなかった企業理解の解像度を高め、周りより一歩早く本選考の準備を進める。</p>
+                </div>
+            </div>
+
+            <!-- Slide 7: Why OBOG -->
+            <div id="slide-7" class="slide">
+                 <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">なぜOBOG訪問が<span class="text-blue-500">志望動機を強化</span>するのか</h2>
+                 <div class="max-w-3xl mx-auto space-y-4">
+                    <div class="bg-gray-50 p-5 rounded-lg">
+                        <p class="font-bold text-gray-700">本選考で求められること</p>
+                        <p class="text-gray-600">同業他社と比較し「なぜこの会社なのか」を明確に言語化する力。</p>
+                    </div>
+                    <div class="text-center my-4">
+                        <svg class="w-8 h-8 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                    <div class="bg-blue-50 p-5 rounded-lg">
+                        <p class="font-bold text-blue-700">OBOG訪問で得られる情報</p>
+                        <p class="text-blue-600">社員と直接話すことで、具体的な仕事内容、他社との違い、社風などを具体的に把握できます。</p>
+                    </div>
+                     <div class="text-center my-4">
+                        <svg class="w-8 h-8 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </div>
+                     <div class="bg-green-50 p-5 rounded-lg">
+                        <p class="font-bold text-green-700">結果</p>
+                        <p class="text-green-600">これらの一次情報が、説得力のある志望動機の強力な土台となります。</p>
+                    </div>
+                 </div>
+            </div>
+
+            <!-- Slide 8: Summary -->
+            <div id="slide-8" class="slide text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-8">まとめ：7月から逆転するために</h2>
+                <div class="space-y-6 max-w-2xl mx-auto text-left">
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center space-x-4">
+                        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white font-black text-2xl">1</span>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-800">応募数を圧倒的に増やす</h3>
+                            <p class="text-gray-600">行動量を増やし、経験と機会を積み重ねる。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center space-x-4">
+                        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white font-black text-2xl">2</span>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-800">選考を徹底的に振り返る</h3>
+                            <p class="text-gray-600">「どうすれば良くなるか」の視点で改善を続ける。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md flex items-center space-x-4">
+                        <span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500 text-white font-black text-2xl">3</span>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-800">OBOG訪問を積極的に行う</h3>
+                            <p class="text-gray-600">リアルな情報を収集し、企業理解の解像度を高める。</p>
+                        </div>
+                    </div>
+                </div>
+                 <p class="mt-10 text-xl font-bold gradient-text">今からの行動で、納得のいくキャリアを掴み取りましょう！</p>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex justify-between items-center p-4 bg-gray-50 border-t border-gray-200">
+            <button id="prevBtn" class="bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded-lg hover:bg-gray-400 transition disabled:opacity-50 disabled:cursor-not-allowed">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <div id="slide-counter" class="text-sm text-gray-600"></div>
+            <button id="nextBtn" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 transition disabled:opacity-50 disabled:cursor-not-allowed">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // --- SCRIPT FOR SLIDE FUNCTIONALITY ---
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slideCounter = document.getElementById('slide-counter');
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+            });
+
+            // Show the target slide
+            if (slides[index]) {
+                slides[index].classList.add('active');
+            }
+            
+            updateButtons();
+            updateCounter();
+        }
+
+        function updateButtons() {
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === totalSlides - 1;
+        }
+        
+        function updateCounter() {
+            slideCounter.textContent = `スライド ${currentSlide + 1} / ${totalSlides}`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                nextBtn.click();
+            } else if (e.key === 'ArrowLeft') {
+                prevBtn.click();
+            }
+        });
+
+        // Initialize the first slide
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
